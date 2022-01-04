@@ -1,0 +1,39 @@
+{
+  "name": "grpc-web-ts-compiler",
+  "description": "gRPC browser client generator for js and d.ts files for Google's Protocol Buffers",
+  "keywords": [
+    "gRPC",
+    "gRPC-web",
+    "browser",
+    "client",
+    "generator",
+    "javascript",
+    "typescript",
+    "google",
+    "protocol",
+    "buffers"
+  ],
+  "version": "1.0.0",
+  "author": "vallyien@gmail.com",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vallyian/grpc-web-ts-compiler.git"
+  },
+  "main": "index.js",
+  "scripts": {},
+  "bin": {
+    "proto": "index.js"
+  },
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {
+    "@improbable-eng/grpc-web": "latest",
+    "google-protobuf": "latest",
+    "@types/google-protobuf": "latest",
+    "grpc-web": "latest",
+    "protoc-binary": "latest",
+    "ts-protoc-gen": "latest"
+  }
+}
