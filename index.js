@@ -49,9 +49,9 @@ function generate(inputDir, outputDir) {
         throw Error(`protoGenTsBinary "${protoGenTsBinary}" not found`);
 
     require("protoc-binary").protoc([
-        "--plugin", `protoc-gen-ts="${protoGenTsBinary}"`,
-        "--js_out", `"import_style=commonjs,binary:${outputDir}"`,
-        "--ts_out", `"service=grpc-web:${outputDir}"`,
+        `--plugin=protoc-gen-ts=${protoGenTsBinary}`,
+        `--js_out=import_style=commonjs,binary:${outputDir}`,
+        `--ts_out=service=grpc-web:${outputDir}`,
         "*.proto"
     ], inputDir);
 

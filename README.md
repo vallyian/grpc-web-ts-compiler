@@ -1,14 +1,14 @@
 # grpc-web-ts-compiler
 
 Generate browser client (js + d.ts) files from proto files
-using [protoc](https://grpc.io/docs/protoc-installation/)
+using [protoc](https://grpc.io/docs/protoc-installation/) 3.20.3
 and [grpc-web](https://github.com/grpc/grpc-web).  
 
 The server must also implement [grpc-web](https://github.com/grpc/grpc-web) for this to work.  
 
 ## Install
 
-`npm install --dave-dev grpc-web-ts-compiler`
+`npm install --save-dev grpc-web-ts-compiler`
 
 **Notes** regarding included [google-protobuf](https://www.npmjs.com/package/google-protobuf) and [@improbable-eng/grpc-web](https://www.npmjs.com/package/@improbable-eng/grpc-web) libs:
 

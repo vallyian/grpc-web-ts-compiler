@@ -1,39 +1,44 @@
 {
-  "name": "grpc-web-ts-compiler",
-  "description": "gRPC browser client generator for js and d.ts files for Google's Protocol Buffers",
-  "keywords": [
-    "gRPC",
-    "gRPC-web",
-    "browser",
-    "client",
-    "generator",
-    "javascript",
-    "typescript",
-    "google",
-    "protocol",
-    "buffers"
-  ],
-  "version": "1.0.0",
-  "author": "vallyien@gmail.com",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/vallyian/grpc-web-ts-compiler.git"
-  },
-  "main": "index.js",
-  "scripts": {},
-  "bin": {
-    "proto": "index.js"
-  },
-  "files": [
-    "index.js"
-  ],
-  "dependencies": {
-    "@improbable-eng/grpc-web": "latest",
-    "google-protobuf": "latest",
-    "@types/google-protobuf": "latest",
-    "grpc-web": "latest",
-    "protoc-binary": "latest",
-    "ts-protoc-gen": "latest"
-  }
+    "name": "grpc-web-ts-compiler",
+    "description": "gRPC browser client generator for js and d.ts files for Google's Protocol Buffers",
+    "keywords": [
+        "gRPC",
+        "gRPC-web",
+        "browser",
+        "client",
+        "generator",
+        "javascript",
+        "typescript",
+        "google",
+        "protocol",
+        "buffers"
+    ],
+    "version": "1.1.0",
+    "author": "vallyian@gmail.com",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/vallyian/grpc-web-ts-compiler.git"
+    },
+    "main": "index.js",
+    "scripts": {
+        "pretest": "node -e \"fs.rmSync('artifacts', { recursive: true, force: true })\"",
+        "test": "node . test/proto artifacts",
+        "posttest": "node -e \"fs.existsSync('artifacts/greet_pb_service.d.ts') || assert.fail('failed')\""
+    },
+    "bin": {
+        "proto": "index.js"
+    },
+    "files": [
+        "index.js"
+    ],
+    "dependencies": {
+        "@improbable-eng/grpc-web": "latest",
+        "@types/google-protobuf": "latest",
+        "google-protobuf": "latest",
+        "grpc-web": "latest",
+        "protoc-binary": "latest",
+        "ts-protoc-gen": "latest"
+    },
+    "protoc-binary": "3.20.3"
 }
